@@ -1,0 +1,236 @@
+body{
+    background-color: black;
+    font-family: orbitron;
+    font-size: 40px;
+}
+
+.allPlanners{
+    margin-left: 22.5%;
+
+}
+
+.textarea{
+    width: 300px;
+    height: 200px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.complete{
+    background-color: green;
+    font-family: orbitron;
+        width: 450px;
+    height: 400px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    /* color: white; */
+}
+.complete:hover{
+    background-color: rgb(0, 217, 0);
+    cursor: pointer;
+    animation: lift 1s infinite alternate;
+    width: 470px;
+    height: 420px;
+}
+.complete:hover{
+    background-color: rgb(0, 217, 0);
+    cursor: pointer;
+    animation: lift 1s  ;
+    width: 470px;
+    height: 420px;
+}.delegate:hover{
+    background-color: rgb(198, 139, 22);
+    cursor: pointer;
+    animation: lift 1s  ;
+    width: 470px;
+    height: 420px;
+}.schedule:hover{
+    background-color: rgb(183, 188, 22);
+    cursor: pointer;
+    animation: lift 1s  ;
+    width: 470px;
+    height: 420px;
+}
+.dont-do:hover{
+    background-color: rgb(217, 0, 80);
+    cursor: pointer;
+    animation: lift 2s  ;
+}
+.complete::placeholder{
+    color: white;
+    text-align: center;
+}
+.delegate::placeholder{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.schedule::placeholder{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.dont-do::placeholder{
+    color: white;
+    text-align: center;
+}
+.delegate{
+    background-color: rgb(213, 138, 0);
+    font-family: orbitron;
+        width: 450px;
+    height: 400px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.schedule{
+    background-color: rgb(246, 255, 0);
+    font-family: orbitron;
+        width: 450px;
+    height: 400px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+
+}
+
+.dont-do{
+    background-color: red ;
+       font-family: orbitron;
+        width: 450px;
+    height: 400px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+@keyframes comeForward {
+  0% {
+    /* Starts at its original position in the Z-axis */
+    transform: translateZ(0); 
+  }
+  100% {
+    /* Moves 200px towards the viewer (forward) */
+    transform: translateZ(200px); 
+  }
+}
+
+.matrix-ops{
+    /* background-color: #ff5733; */
+    /* margin-left: 45%; */
+    background-color: rgb(20, 232, 91);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    /* align-self: center; */
+    color:rgb(0, 0, 0);
+    font-family: orbitron;}
+    
+
+.matrix-ops:hover{
+    padding: 20px 52px;
+    animation:  10s lift forwards;
+    background-color: #0cd2ff;
+    color: rgb(9, 6, 6);
+    /* content: ">>>"; */
+    content: '>>>';
+        animation: lift 2s  ;
+}
+
+.title{
+    color: white;
+    text-align: left;
+    margin-top: 5%;
+    font-family: orbitron;
+    font-size: 100px;
+
+}
+
+.marquee{
+        color: white;
+    text-align: left;
+    margin-top: 5%;
+    font-family: orbitron;
+    font-size: 70px;
+}
+
+@keyframes lift {
+  0% { /* Start */
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  50% { /* Lifted state */
+    transform: translateY(-10px) scale(1.05); /* Move up, slightly bigger */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3); /* Deeper shadow */
+  }
+  100% { /* Return to normal */
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}
+
+.ribbon{
+    background-color: #9c05ed;
+    color: #ffffff;
+    font-family: orbitron;
+    font-size: 35px;
+    margin-top: 5%;
+    border-radius: 10px;
+    width: fit-content;
+    /* animation: ; */
+    /* padding-right: fit-content; */
+    a:hover{
+        background-color: #06af79;
+        cursor: pointer;
+        font-size: 35px;
+        animation: lift 1s  ;
+
+    }
+
+
+}
+    a:hover{
+        background-color: #06af79;
+        cursor: pointer;
+        font-size: 35px;
+        animation: lift 1s  ;
+
+    }
+
+.normalText{
+        color: white;
+    text-align: left;
+    margin-top: 5%;
+    font-family: orbitron;
+    font-size: 50px;
+
+}
+
+.notepad{
+    background-color: rgb(0, 0, 0);
+    font-family: orbitron;
+        width: 750px;
+    height: 750px;
+    font-family: orbitron;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(226, 226, 226);
+}

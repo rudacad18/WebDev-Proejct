@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"> 
+     <head>
+            <meta charset="UTF-8">
+            <link href="stylePlanner.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+     </head>  
+<body>
+
+
+<p class="title">NotePad</p>
+<div class="ribbon">
+    <a onclick="window.location.href='portfolio.html'">|||Know the Guy|||>></a>
+    >
+    <a style= "animation: lift 1s;" onclick="window.location.href='page.html'">|||Home|||>>></a>
+    <a style= "animation: lift 1s;" onclick="alert('You are being redirected to Litelelo.in. (Goated website btw)'); location.href='https://www.litelelo.in/'" >|||Community|||       </a>
+    <a style= "animation: lift 1s;" onclick="window.location.href='planner.html'">|||Planner|||       </a>
+</div>
+<marquee class="marquee" speed="200%">Just Chill.</marquee>
+<div class="allPlanners">    
+  <textarea id="note-area" class="notepad" id="note-area" placeholder="NOTE DOWN YOUR THOUGHTS" aria-placeholder="white"></textarea>
+
+    <div class="footer">
+        <button class="matrix-ops" onclick="clearNote()">Clear</button>
+        <button class="matrix-ops" onclick="; alert('Nice! Your note is saved.'); saveNote()">Save to Browser</button>
+
+        <button class="matrix-ops" onclick="window.location.href='planner.html'">Go Back</button>
+
+    </div>
+
+<script>
+// 1. Define the IDs of all our boxes in an array
+    const boxes = ['note-area'];
+
+    // 2. Load data for ALL boxes when the page opens
+    window.onload = () => {
+        boxes.forEach(id => {
+            const savedValue = localStorage.getItem(id);
+            if (savedValue) {
+                document.getElementById(id).value = savedValue;
+            }
+        });
+    };
+
+    // 3. Save data for ALL boxes
+    function saveNote() {
+        boxes.forEach(id => {
+            const content = document.getElementById(id).value;
+            localStorage.setItem(id, content);
+        });
+        alert('Nice! Your Eisenhower Matrix is saved.');
+    }
+
+    // 4. Clear ALL boxes and remove from memory
+    function clearNote() {
+        if (confirm('Are you sure you want to clear the entire matrix?')) {
+            boxes.forEach(id => {
+                document.getElementById(id).value = ''; // Clear the screen
+                localStorage.removeItem(id);            // Clear the browser memory
+            });
+        }
+    }
+</script>
+</div>
+</body>
+
+</html>
