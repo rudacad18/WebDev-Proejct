@@ -26,7 +26,7 @@
 <marquee class="marquee" speed="200%">In life, sometimes you have to just sit back, relax and contemplates.</marquee>
 
 <div class="allPlanners">    
-    <textarea id="schedule" color="white" class="schedule" id="note-area" placeholder="SCHEDULE" aria-placeholder="white"></textarea>
+    <textarea id="schedule" onclick="" color="white" class="schedule" id="note-area" placeholder="SCHEDULE" aria-placeholder="white"></textarea>
     
     <textarea id="complete" color="white" class="complete" id="note-area" placeholder="COMPLETE" aria-placeholder="white"></textarea>
 <br>
@@ -73,6 +73,15 @@
                 localStorage.removeItem(id);            // Clear the browser memory
             });
         }
+        id = ['delegate', 'dont-do', 'schedule', 'complete'];
+        // 1. Get the element by its ID
+  const element = document.getElementById(id);
+
+  // 2. Add an event listener for clicks
+  element.addEventListener('click', function() {
+    // 3. Toggle the 'struck' class on the element
+    element.classList.toggle('struck');
+  });
     }
 </script>
 </div>
